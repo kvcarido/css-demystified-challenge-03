@@ -1,0 +1,38 @@
+:root {
+  /* font family */
+  --ff-inter: "Inter", sans-serif;
+  --ff-baloo: "Baloo 2", sans-serif;
+
+  /* font sizes */
+  --fs-100: 0.8125rem;
+  --fs-200: 1rem;
+  --fs-300: 1.0625rem;
+  --fs-400: 1.5rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.125rem;
+  --fs-800: 4.25rem;
+  --fs-900: 6rem;
+
+  /* 
+  --fs-100: 0.8125rem;      13px
+  --fs-200: 1rem;           16px
+  --fs-300: 1.0625rem;      17px
+  --fs-400: 1.5rem;         24px
+  --fs-600: 1.75rem;        28px
+  --fs-700: 2.125rem;       34px
+  --fs-800: 4.25rem;        68px
+  --fs-900: 6rem;           96px 
+  */
+
+  /* font weight */
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-900: 900;
+
+  /* colors */
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #030303;
+  --clr-primary-400: #ff3369;
+
+  --spacer: 1rem;
+}
