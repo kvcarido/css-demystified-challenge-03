@@ -83,7 +83,7 @@ body {
 /*******************/
 
 .flow-content > * + * {
-  margin-top: var(--spacer);
+  margin-top: var(--flow-spacer, var(--spacer));
 }
 
 .container {
@@ -163,7 +163,6 @@ h2 {
 /**************/
 
 .primary-header .container {
-  padding: 0 2rem;
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
@@ -232,6 +231,22 @@ section {
   padding: 3rem 0;
 }
 
+@media (min-width: 40rem) {
+  section {
+    padding: 5rem 0;
+  }
+
+  .recipe__inner {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .recipe__inner > * {
+    flex-basis: 100%;
+    padding: 0 4rem;
+  }
+}
+
 /*******************/
 /* general styling */
 /*******************/
@@ -244,6 +259,28 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.recipe__outer {
+  background: var(--clr-neutral-100);
+}
+
+.recipe__inner > div {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.ingredients {
+  border-bottom: 1px solid grey;
+}
+
+.source {
+  font-size: var(--fs-100);
+}
+
+.source a {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
 }
 
 @media (min-width: 40rem) {
@@ -259,5 +296,38 @@ section {
   .primary-nav a:hover {
     cursor: pointer;
     color: var(--clr-primary-400);
+  }
+
+  .intro {
+    padding-bottom: 10rem;
+  }
+
+  .intro__inner {
+    width: 70%;
+  }
+
+  .recipe {
+    background: var(--clr-neutral-300);
+  }
+
+  .recipe__outer {
+    width: min(90%, 80rem);
+    margin: 0 auto;
+    padding: 4rem 0;
+    border-radius: 1rem;
+    margin-top: -10rem;
+  }
+
+  .ingredients {
+    --flow-spacer: 3rem;
+    border-left: 1px solid lightgrey;
+  }
+
+  .instructions {
+    --flow-spacer: 3rem;
+  }
+
+  .instructions ol li {
+    margin-top: var(--spacer);
   }
 }
