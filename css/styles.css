@@ -94,7 +94,17 @@ body {
 
 .flex {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
+}
+
+@media (min-width: 40rem) {
+  .flex {
+    flex-direction: row;
+  }
+
+  .flex > *:not(:first-child) {
+    margin-left: 2rem;
+  }
 }
 
 .bg-accent {
@@ -152,18 +162,66 @@ h2 {
 /* components */
 /**************/
 
-.primary-nav a {
-  font-family: var(--ff-baloo);
-  font-size: var(--fs-200);
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--clr-neutral-900);
-  transition: all 300ms;
+.primary-header .container {
+  padding: 0 2rem;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.primary-nav a:hover {
-  cursor: pointer;
-  color: var(--clr-primary-400);
+.primary-header__nav {
+  padding: 1.5rem;
+}
+
+.primary-nav {
+  position: fixed;
+  bottom: 0.5em;
+  left: 0.5em;
+  right: 0.5em;
+  padding: 0.5em 0;
+  background-color: var(--clr-neutral-900);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.primary-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.primary-nav a {
+  font-family: var(--ff-baloo);
+  font-size: var(--fs-100);
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  transition: color 300ms;
+}
+
+@media (min-width: 40rem) {
+  .primary-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .primary-header__nav {
+    background: var(--clr-neutral-100);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+  }
+
+  .primary-nav {
+    position: static;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+  }
+
+  .primary-nav ul li {
+    align-self: center;
+  }
 }
 
 /******************/
@@ -183,8 +241,23 @@ section {
   background-size: cover;
   background-position: center;
   min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (min-width: 40rem) {
-  min-height: 50vh;
+  .primary-nav a {
+    font-family: var(--ff-baloo);
+    font-size: var(--fs-200);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--clr-neutral-900);
+    transition: all 300ms;
+  }
+
+  .primary-nav a:hover {
+    cursor: pointer;
+    color: var(--clr-primary-400);
+  }
 }

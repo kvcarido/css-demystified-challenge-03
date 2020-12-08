@@ -12,27 +12,32 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <!-- primary nav -->
-      <nav class="primary-nav">
-        <img src="assets/logo.png" alt="" class="header-logo" />
-        <ul class="lol">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Recipes</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-
+    <header class="primary-header">
       <!-- hero -->
-      <section class="hero-banner">
+      <div class="hero-banner">
+        <div class="primary-header__nav">
+          <!-- nav logo -->
+          <a href="index.html"
+            ><img src="assets/logo.png" alt="" class="header-logo"
+          /></a>
+
+          <!-- primary nav -->
+          <nav class="primary-nav">
+            <ul class="flex">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Recipes</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="container flow-content">
           <h1 class="banner-title">A crackling burger</h1>
           <p class="banner-subtitle">
             A juicy, delicious basic beef burger recipe
           </p>
         </div>
-      </section>
+      </div>
     </header>
 
     <!-- intro -->
