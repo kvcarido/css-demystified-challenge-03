@@ -257,7 +257,7 @@ section {
 /*******************/
 
 .hero-banner {
-  background-image: url("/assets/hero.jpg");
+  background-image: url(https://raw.githubusercontent.com/kvcarido/css-demystified-challenge-03/main/assets/hero.jpg);
   background-size: cover;
   background-position: center;
   min-height: 75vh;
